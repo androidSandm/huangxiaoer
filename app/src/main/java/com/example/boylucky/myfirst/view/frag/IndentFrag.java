@@ -79,6 +79,7 @@ public class IndentFrag extends Fragment implements IIndentView {
     public void onStart() {
         super.onStart();
 
+
     }
 
     @Subscribe

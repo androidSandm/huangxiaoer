@@ -57,8 +57,6 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
      */
     private TextView tv_nickname;
     private UserPresenter userPresenter;
-    private String uid;
-    private String token;
     private String nick;
     //本地相册图片选择
     private String[] mCustomItem = {"本地相册", "相机拍照"};
@@ -70,6 +68,8 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     private Uri tempUri;
     private SharedPreferences sp;
     private SharedPreferences.Editor edit;
+    private String uid1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -95,11 +95,10 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
         edit = sp.edit();
 
         String ret = sp.getString("ret", "1");
-        String uid = sp.getString("uid", null);
+        uid1 = sp.getString("uid", null);
 
         Intent intent = getIntent();
-        Log.e("img-----------", "000000+" + uid + "-----" + token);
-        if (!ret.equals("0")&&!uid.equals(null)){
+        if (!ret.equals("0")&&!uid1.equals(null)){
             String icon = intent.getStringExtra("icon");
             String nikname = intent.getStringExtra("nikname");
             tou1.setImageURI(Uri.parse(icon));
@@ -137,8 +136,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         nick = editText.getText().toString();
-                                        Log.e("uid--====","*-*-*-*-*-*-"+uid+"-*-*-*-"+nick);
-                                        userPresenter.getData(uid,nick);
+                                        userPresenter.getData(uid1,nick);
                                     }
                                 }).create();
                     dialog.show();
@@ -170,7 +168,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
                         RequestBody filebody = RequestBody.create(MediaType.parse("application/octet-stream"), file != null ? file : Defaltefile);
                         MultipartBody.Part part = MultipartBody.Part.createFormData("file", file.getName(), filebody);
 
-                        userPresenter.getDataFrom(uid,part);
+                        userPresenter.getDataFrom(uid1,part);
                     }
                     break;
             }
@@ -255,6 +253,7 @@ public class UserActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onSuccess(NickBean nickBean) {
         if ("0".equals(nickBean.getCode())){
+            Log.e("nickname","----------"+nick);
             tv_nickname.setText(nick);
         }
     }
