@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:gravity="center"
+    android:id="@+id/ll"
+    android:layout_height="50dp">
+    <ImageView
+        android:id="@+id/huo"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@mipmap/file"
+        android:visibility="gone"
+        android:layout_marginLeft="14dp"
+        />
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="库尔"
+        android:layout_toRightOf="@id/huo"
+        android:textSize="16dp"
+        android:gravity="center_vertical"
+        />
+</RelativeLayout>

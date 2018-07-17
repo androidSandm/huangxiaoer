@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/ll"
+    android:background="#fff"
+    android:layout_height="100dp">
+<com.facebook.drawee.view.SimpleDraweeView
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:padding="5dp"
+    android:id="@+id/s_img"
+    />
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_toRightOf="@id/s_img"
+        android:layout_marginLeft="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:text="123"
+        android:id="@+id/name_tv"
+        android:textSize="14dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:layout_below="@id/name_tv"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv"
+        android:gravity="center"
+        android:textSize="10dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="123"
+        android:gravity="center"
+        android:layout_below="@id/tv"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv2"
+        android:textSize="10dp"
+        />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:padding="5dp"
+            android:src="@mipmap/nolove" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_below="@id/img"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="adfvre"
+            android:textSize="10dp" />
+    </RelativeLayout>
+</RelativeLayout>

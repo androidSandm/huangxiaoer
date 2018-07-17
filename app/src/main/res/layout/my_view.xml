@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:theme="@style/NormalDialogStyle"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/pai"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/kuang"
+        android:text="拍照" />
+
+
+
+    <Button
+        android:id="@+id/ce"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@mipmap/kuang"
+        android:text="相册" />
+
+    <Button
+        android:id="@+id/quxiao"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@mipmap/kuang"
+        android:text="取消" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+</LinearLayout>

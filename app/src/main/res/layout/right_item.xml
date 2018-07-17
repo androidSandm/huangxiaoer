@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/shi_img"
+        android:layout_margin="5dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_margin="6dp">
+
+        <TextView
+            android:id="@+id/shi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ieruvketneukjf"
+            android:textColor="#404046"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/shi_yue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shi_name"
+            android:layout_marginTop="6dp"
+            android:text="ieruvketneukjf"
+            android:textColor="#999999"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/shi_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shi_yue"
+            android:layout_marginTop="6dp"
+            android:text="ieruvketneukjf"
+            android:textColor="#ff6414"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/jia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/jia" />
+        <TextView
+            android:id="@+id/shi_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:layout_toLeftOf="@+id/jia"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:visibility="gone"
+            />
+        <ImageView
+            android:id="@+id/jian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/jian"
+            android:visibility="gone"
+            android:layout_toLeftOf="@id/shi_num"
+            android:layout_alignParentBottom="true"
+            />
+    </RelativeLayout>
+</LinearLayout>

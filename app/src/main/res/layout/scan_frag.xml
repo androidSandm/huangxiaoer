@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f8f8f8"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#fff"
+    >
+    <ImageView
+        android:id="@+id/lie"
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:src="@mipmap/lie"
+        android:layout_marginLeft="22.5dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="20dp"
+        android:textColor="#464646"
+        android:gravity="center"
+        android:text="知青居"
+        />
+</RelativeLayout>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab"
+        android:background="#fff"
+        app:tabIndicatorColor="#ffd200"
+        app:tabSelectedTextColor="#ffd200"
+        app:tabTextColor="#999999"
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+    </android.support.design.widget.TabLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>
