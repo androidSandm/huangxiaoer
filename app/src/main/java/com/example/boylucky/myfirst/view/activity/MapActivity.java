@@ -108,6 +108,7 @@ public class MapActivity extends AppCompatActivity implements LocationSource,AMa
                 SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                 Date date = new Date(aMapLocation.getTime());
                 df.format(date);//定位时间
+               
                 aMapLocation.getAddress();//地址，如果option中设置isNeedAddress为false，则没有此结果，网络定位结果中会有地址信息，GPS定位不返回地址信息。
                 aMapLocation.getCountry();//国家信息
                 aMapLocation.getProvince();//省信息
